@@ -17,7 +17,7 @@
             Console.WriteLine($"{peers.Peers.Count} peers are read");
 
             var client = new HttpClient();
-            client.Timeout = TimeSpan.FromSeconds(1);
+            client.Timeout = TimeSpan.FromMilliseconds(500);
 
             var content = new StringContent(@"{ ""action"": ""version"" }");
 
